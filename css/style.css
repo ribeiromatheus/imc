@@ -1,0 +1,53 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+  .container {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.titulo {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+section {
+  background-color: mediumspringgreen;
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+  border-radius: 15px;
+}
+
+#res {
+  padding: 22%;
+}
+
+#txtWeight, #txtHeight {
+  height: 30px;
+  border-radius: 15px;
+  text-align: center;
+  border: none;
+}
+#txtWeight:focus, #txtHeight:focus {
+  outline-style: none;
+}
+
+#btnCalc {
+  font-size: 0.75em;
+  padding-bottom: 2%;
+  color: #fff;
+  border: none;
+  background-color: transparent;
+}
+
+#btnCalc:focus {
+  outline-style: none;
+}
+
+#btnCalc:hover {
+  cursor: pointer;
+}
+
+#situacao {
+  font-size: 0.5em;
+}
