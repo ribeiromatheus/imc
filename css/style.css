@@ -2,7 +2,8 @@ body {
     font-family: Helvetica, Arial, sans-serif;
   }
   .container {
-    max-width: 200px;
+    padding-top: 2%;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -19,22 +20,10 @@ section {
 }
 
 #res {
-  padding: 22%;
-}
-
-#txtWeight, #txtHeight {
-  height: 30px;
-  border-radius: 15px;
-  text-align: center;
-  border: none;
-}
-#txtWeight:focus, #txtHeight:focus {
-  outline-style: none;
+  padding: 10%;
 }
 
 #btnCalc {
-  font-size: 0.75em;
-  padding-bottom: 2%;
   color: #fff;
   border: none;
   background-color: transparent;
@@ -42,12 +31,4 @@ section {
 
 #btnCalc:focus {
   outline-style: none;
-}
-
-#btnCalc:hover {
-  cursor: pointer;
-}
-
-#situacao {
-  font-size: 0.5em;
 }

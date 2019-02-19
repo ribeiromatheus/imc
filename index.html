@@ -4,18 +4,29 @@
   <title>Calculadora IMC</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="container">
-      <h3 class="titulo">Calculadora IMC</h3>
+      <h3 class="titulo text-center">Calculadora IMC</h3>
       <section>
         <div id="res"></div>
         <div id="situacao"></div>
         <hr>
-        <div>
-          <input type="text" id="txtWeight" placeholder="Peso">
-          <input type="text" id="txtHeight" placeholder="Altura">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Kg</span>
+            <span class="input-group-text">0.00</span>
+          </div>
+          <input type="number" id="txtWeight" class="form-control" min="0" placeholder="Peso">
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">M</span>
+              <span class="input-group-text">0.00</span>
+            </div>
+            <input type="number" id="txtHeight" class="form-control" min="0" placeholder="Altura">
         </div>
         <hr>
         <button id="btnCalc">Calcular</button>

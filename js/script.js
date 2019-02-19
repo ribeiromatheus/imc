@@ -1,27 +1,41 @@
-var txtHeight = document.getElementById('txtHeight'),
+var btnCalc = document.getElementById('btnCalc'),
+    res = document.getElementById('res'),
+    situacao = document.getElementById('situacao');
+
+btnCalc.addEventListener('click', calcular);
+
+function calcular() {
+    let txtHeight = document.getElementById('txtHeight'),
         txtWeight = document.getElementById('txtWeight'),
-        btnCalc = document.getElementById('btnCalc'),
-        res = document.getElementById('res'),
-        situacao = document.getElementById('situacao');
-        
-    txtHeight.addEventListener('keydown', format)
-    txtWeight.addEventListener('keydown', format)
-    btnCalc.addEventListener('click', calcImc);
-
-    function format (e) {
-      if (e.key === ',') e.preventDefault();
+        res = document.getElementById('res');
+    
+    if (!validate(txtWeight.value, txtHeight.value)) {
+        res.innerHTML = calcImc(txtWeight.value, txtHeight.value).toFixed(2);
+        situacao.innerHTML = result();
     }
+}
 
-    function calcImc () {
-        let sit = "";
-        let calc = parseFloat(txtWeight.value) / parseFloat(txtHeight.value ** 2);
-        res.innerHTML = calc.toFixed(2);
-        
-        if (calc < 18) sit = "Abaixo do peso";
-        else if (calc <= 18 && calc <= 25) sit = "Normal";
-        else if (calc <= 25 && calc <= 30) sit = "Sobrepeso";
-        else if (calc <= 30 && calc <= 35) sit = "Obeso(a)";
-        else sit = "Obesidade moderada";
+function validate (weight, height) {
+    let ret = false;
 
-        situacao.innerHTML = sit;
-    }
+    if (weight == '' || height == '') ret = true;
+    
+    return ret;
+}
+
+function calcImc(weight, height) {
+    return weight / height ** 2;
+}
+
+function result () {
+    let sit = "";
+    let imc = calcImc(txtWeight.value, txtHeight.value);
+
+    if (imc < 18) sit = "Abaixo do peso";
+    else if (imc <= 18 && imc <= 25) sit = "Normal";
+    else if (imc <= 25 && imc <= 30) sit = "Sobrepeso";
+    else if (imc <= 30 && imc <= 35) sit = "Obeso(a)";
+    else sit = "Obesidade moderada";
+
+    return sit;
+}
