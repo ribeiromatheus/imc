@@ -1,25 +1,28 @@
-var btnCalc = document.getElementById('btnCalc'),
+var txtHeight = document.getElementById('txtHeight'),
+    txtWeight = document.getElementById('txtWeight'),
+    res = document.getElementById('res'),
+    btnCalc = document.getElementById('btnCalc'),
     res = document.getElementById('res'),
     situacao = document.getElementById('situacao');
 
+document.addEventListener('DOMContentLoaded', () => {
+    txtWeight.focus();
+});
 btnCalc.addEventListener('click', calcular);
 
+
 function calcular() {
-    let txtHeight = document.getElementById('txtHeight'),
-        txtWeight = document.getElementById('txtWeight'),
-        res = document.getElementById('res');
-    
     if (!validate(txtWeight.value, txtHeight.value)) {
         res.innerHTML = calcImc(txtWeight.value, txtHeight.value).toFixed(2);
         situacao.innerHTML = result();
     }
 }
 
-function validate (weight, height) {
+function validate(weight, height) {
     let ret = false;
 
     if (weight == '' || height == '') ret = true;
-    
+
     return ret;
 }
 
@@ -27,7 +30,7 @@ function calcImc(weight, height) {
     return weight / height ** 2;
 }
 
-function result () {
+function result() {
     let sit = "";
     let imc = calcImc(txtWeight.value, txtHeight.value);
 
