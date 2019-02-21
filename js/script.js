@@ -5,11 +5,12 @@ var txtHeight = document.getElementById('txtHeight'),
     res = document.getElementById('res'),
     situacao = document.getElementById('situacao');
 
-document.addEventListener('DOMContentLoaded', () => {
-    txtWeight.focus();
-});
+document.addEventListener('DOMContentLoaded', onFocus);
 btnCalc.addEventListener('click', calcular);
 
+function onFocus() {
+    txtWeight.focus();
+}
 
 function calcular() {
     if (!validate(txtWeight.value, txtHeight.value)) {
