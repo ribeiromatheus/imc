@@ -19,15 +19,19 @@
             <span class="input-group-text">Kg</span>
             <span class="input-group-text">0.00</span>
           </div>
-          <input type="number" id="txtWeight" class="form-control" min="0" placeholder="Peso" tabindex="1">
+          <input type="number" id="txtWeight" class="form-control" min="0" placeholder="Peso">
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text">M</span>
               <span class="input-group-text">0.00</span>
             </div>
-            <input type="number" id="txtHeight" class="form-control" min="0" placeholder="Altura" tabindex="2">
+            <input type="number" id="txtHeight" class="form-control" min="0" placeholder="Altura">
         </div>
+        <div class="form-group">
+          <label class="radio-inline"><input type="radio" id="rbtnMale" class="form-control" name="gender" checked>Masculino</label>
+          <label class="radio-inline"><input type="radio" id="rbtnFemale" class="form-control" name="gender">Feminino</label>
+      </div>
         <hr>
         <button id="btnCalc">Calcular</button>
       </section>

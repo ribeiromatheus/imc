@@ -3,7 +3,9 @@ var txtHeight = document.getElementById('txtHeight'),
     res = document.getElementById('res'),
     btnCalc = document.getElementById('btnCalc'),
     res = document.getElementById('res'),
-    situacao = document.getElementById('situacao');
+    situacao = document.getElementById('situacao'),
+    rbtnMale = document.getElementById('rbtnMale'),
+    rbtnFemale = document.getElementById('rbtnFemale');
 
 document.addEventListener('DOMContentLoaded', onFocus);
 btnCalc.addEventListener('click', calcular);
@@ -35,11 +37,18 @@ function result() {
     let sit = "";
     let imc = calcImc(txtWeight.value, txtHeight.value);
 
-    if (imc < 18) sit = "Abaixo do peso";
-    else if (imc <= 18 && imc <= 25) sit = "Normal";
-    else if (imc <= 25 && imc <= 30) sit = "Sobrepeso";
-    else if (imc <= 30 && imc <= 35) sit = "Obeso(a)";
-    else sit = "Obesidade moderada";
-
+    if (rbtnMale.checked) {
+        if (imc < 20) sit = "Abaixo do peso";
+        else if (imc <= 24.9) sit = "Normal";
+        else if (imc <= 29.9) sit = "Obesidade Leve";
+        else if (imc <= 39.9) sit = "Obesidade Moderada";
+        else sit = "Obesidade Mórbida";
+    } else if (rbtnFemale.checked) {
+        if (imc < 19) sit = "Abaixo do peso";
+        else if (imc <= 23.9) sit = "Normal";
+        else if (imc <= 28.9) sit = "Obesidade Leve";
+        else if (imc <= 38.9) sit = "Obesidade Moderada";
+        else sit = "Obesidade Mórbida";
+    }
     return sit;
 }
