@@ -9,9 +9,15 @@ var txtHeight = document.getElementById('txtHeight'),
 
 document.addEventListener('DOMContentLoaded', onFocus);
 btnCalc.addEventListener('click', calcular);
+txtHeight.addEventListener('keydown', onKeyDown);
+txtWeight.addEventListener('keydown', onKeyDown);
 
 function onFocus() {
     txtWeight.focus();
+}
+
+function onKeyDown(e) {
+    if (e.key === 'e') e.preventDefault();
 }
 
 function calcular() {
