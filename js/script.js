@@ -43,7 +43,7 @@ function result() {
         else if (imc <= 29.9) sit = "Obesidade Leve";
         else if (imc <= 39.9) sit = "Obesidade Moderada";
         else sit = "Obesidade Mórbida";
-    } else if (rbtnFemale.checked) {
+    } else {
         if (imc < 19) sit = "Abaixo do peso";
         else if (imc <= 23.9) sit = "Normal";
         else if (imc <= 28.9) sit = "Obesidade Leve";
