@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -28,9 +29,17 @@
             </div>
             <input type="number" id="txtHeight" class="form-control" min="0" placeholder="Altura">
         </div>
-        <div class="form-group">
-          <label class="radio-inline"><input type="radio" id="rbtnMale" class="form-control" name="gender" checked>Masculino</label>
-          <label class="radio-inline"><input type="radio" id="rbtnFemale" class="form-control" name="gender">Feminino</label>
+        <div class="btn-group btn-group-horizontal" data-toggle="buttons">
+          <label class="btn active">
+            <input type="radio" id="rbtnMale" name="gender" checked>
+            <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i>
+            <span>Masculino</span>
+          </label>
+          <label class="btn">
+            <input type="radio" id="rbtnFemale" name="gender">
+            <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i>
+            <span>Feminino</span>
+          </label>
       </div>
         <hr>
         <button id="btnCalc">Calcular</button>

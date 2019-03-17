@@ -32,3 +32,34 @@ section {
 #btnCalc:focus {
   outline-style: none;
 }
+
+#rbtnMale, #rbtnFemale {
+  display: none;
+}
+
+label input[type="radio"] ~ i.fa.fa-circle-o{
+  color: #fff;
+  display: inline;
+}
+
+label input[type="radio"] ~ i.fa.fa-dot-circle-o{
+  display: none;
+}
+
+label input[type="radio"]:checked ~ i.fa.fa-circle-o{
+  display: none;
+}
+
+label input[type="radio"]:checked ~ i.fa.fa-dot-circle-o{
+  color: #000;
+  display: inline;
+}
+
+label:hover input[type="radio"] ~ i.fa {
+  color: #000;
+}
+
+label span {
+  color: #fff;
+  font-size: 1.2em;
+}
