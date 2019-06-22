@@ -1,20 +1,23 @@
 <!doctype html>
 <html>
+
 <head>
   <title>Calculadora IMC</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
   <div class="container">
-      <h3 class="titulo text-center">Calculadora IMC</h3>
-      <section>
-        <div id="res"></div>
-        <div id="situacao"></div>
-        <hr>
+    <h3 class="titulo text-center">Calculadora IMC</h3>
+    <section>
+      <div id="res"></div>
+      <div id="situacao"></div>
+      <hr>
+      <form onsubmit="return false">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text">kg</span>
@@ -23,11 +26,11 @@
           <input type="number" id="txtWeight" class="form-control" min="0" placeholder="Peso">
         </div>
         <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">m</span>
-              <span class="input-group-text">0.00</span>
-            </div>
-            <input type="number" id="txtHeight" class="form-control" min="0" placeholder="Altura">
+          <div class="input-group-prepend">
+            <span class="input-group-text">m</span>
+            <span class="input-group-text">0.00</span>
+          </div>
+          <input type="number" id="txtHeight" class="form-control" min="0" placeholder="Altura">
         </div>
         <div class="btn-group btn-group-horizontal" data-toggle="buttons">
           <label class="btn active">
@@ -40,11 +43,13 @@
             <i class="fa fa-circle-o fa-2x"></i><i class="fa fa-dot-circle-o fa-2x"></i>
             <span>Feminino</span>
           </label>
-      </div>
+        </div>
         <hr>
-        <button id="btnCalc">Calcular</button>
-      </section>
+        <input type="submit" id="btnCalc" value="Calcular">
+      </form>
+    </section>
   </div>
   <script src="js/script.js"></script>
 </body>
+
 </html>

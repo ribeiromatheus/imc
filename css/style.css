@@ -27,6 +27,7 @@ section {
   color: #fff;
   border: none;
   background-color: transparent;
+  text-transform: uppercase;
 }
 
 #btnCalc:focus {

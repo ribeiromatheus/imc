@@ -1,11 +1,10 @@
-var txtHeight = document.getElementById('txtHeight'),
-    txtWeight = document.getElementById('txtWeight'),
-    res = document.getElementById('res'),
-    btnCalc = document.getElementById('btnCalc'),
-    res = document.getElementById('res'),
-    situacao = document.getElementById('situacao'),
-    rbtnMale = document.getElementById('rbtnMale'),
-    rbtnFemale = document.getElementById('rbtnFemale');
+let txtHeight = document.querySelector('#txtHeight'),
+    txtWeight = document.querySelector('#txtWeight'),
+    res = document.querySelector('#res'),
+    btnCalc = document.querySelector('#btnCalc'),
+    situacao = document.querySelector('#situacao'),
+    rbtnMale = document.querySelector('#rbtnMale'),
+    rbtnFemale = document.querySelector('#rbtnFemale');
 
 document.addEventListener('DOMContentLoaded', onFocus);
 btnCalc.addEventListener('click', calcular);
@@ -40,8 +39,8 @@ function calcImc(weight, height) {
 }
 
 function result() {
-    let sit = "";
-    let imc = calcImc(txtWeight.value, txtHeight.value);
+    let sit = "",
+        imc = calcImc(txtWeight.value, txtHeight.value);
 
     if (rbtnMale.checked) {
         if (imc < 20) sit = "Abaixo do peso";
